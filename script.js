@@ -33,7 +33,7 @@
 
  // name a function for human choice
 
- function getHumanChoice()
+ function getHumanChoice(raceTo, currRound)
  {
     let userInput;
 
@@ -41,7 +41,7 @@
 
     do {
 
-    userInput = +prompt("Please Choose Between (Rock, Paper and Scissor). \n \n Type 1 for ROCK \n Type 2 for PAPER \n Type 3 for SCISSOR \n");
+    userInput = +prompt("Round "+ currRound + " of "+ raceTo +"\nPlease Choose Between (Rock, Paper and Scissor). \n \n Type 1 for ROCK \n Type 2 for PAPER \n Type 3 for SCISSOR \n");
 
      if (userInput === null){
 
@@ -138,9 +138,9 @@
  {
     
 
-   for (let i = 1; i < raceTo+1; i++) {
+   for (let i = 1; i < raceTo + 1; i++) {
 
-    const humanSelection = getHumanChoice();
+    const humanSelection = getHumanChoice(raceTo, i);
     const computerSelection = getComputerChoice();
 
     if(humanSelection == null){
@@ -148,12 +148,14 @@
         break;
     }
 
-    console.log('Round '+ i);
+
+    console.log('\n Round '+ i);
     playRound(humanSelection, computerSelection);
 
-    if (i == 5)
+    if (i == raceTo)
     {
-          console.log('-------------Result--------------');
+          console.log('\n -------------Result--------------');
+
         if(computerScore > humanScore)
         {
 
@@ -168,18 +170,9 @@
             console.log(`The two score are tie at the score of ${computerScore} and ${humanScore}`)
 
         }
-        
-
     }
 
    }
-
-  
-
-   
-
-
-
  }
 
 
@@ -189,7 +182,9 @@
 
 
 
- playGame(5);
 
-  
- 
+  setTimeout(() => {
+
+    playGame(5)
+
+  },15000)

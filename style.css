@@ -1,0 +1,50 @@
+body {
+
+    background-color: rgb(15, 15, 15);
+    
+
+
+}
+
+h2 ,h1 {
+
+    font-family: sans-serif;
+    color: white;
+
+}
+
+p {
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size:large;
+    color: white;
+
+
+}
+
+.header-container{
+
+    padding: 12px;
+    text-align: center;
+    margin: 12px 10px 60px;
+    border: 5px solid rgb(29, 114, 8);
+    border-radius: 4px;
+}
+
+.content-container {
+
+    padding: 50px 20px;
+    text-align: center;
+    margin: 12px 12px;
+    border: 5px solid rgb(29, 114, 8);
+    border-radius: 4px;
+}
+
+span {
+
+    color: rgb(59, 202, 24);
+    font-weight: 900;
+
+
+}
+
