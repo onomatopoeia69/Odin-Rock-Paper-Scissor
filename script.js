@@ -77,8 +77,7 @@
         humanScore++;
         console.log(`You: ${humanSelection}  Computer: ${computerSelection}`)
         console.log(`You Win, You: ${humanScore} Computer : ${computerScore}`)
-
-       
+        
     
     }else if(humanSelection == 'scissor' && computerSelection == 'rock' || computerSelection == 'rock' && humanSelection == 'scissor'){
 
