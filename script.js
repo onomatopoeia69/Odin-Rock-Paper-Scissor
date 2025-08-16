@@ -61,7 +61,7 @@
         return "scissor";
      }
         
-    } while (userInput > 3); 
+    } while (userInput > 3 || Number.isNaN(userInput)); 
       
 
  }
